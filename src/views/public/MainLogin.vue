@@ -7,10 +7,6 @@
   :before-close="handleClose">
     <input type="text"  name="username" placeholder="输入帐号"/><br>
     <input type="password"  name="pwd" placeholder="密码"/><br>
-    <select  name="roles">
-        <option value="用户">用户</option>
-        <option value="管理员">管理员</option>
-    </select>
   <span slot="footer" class="dialog-footer">
     <p style="margin:10px">忘记密码<i class="el-icon-d-arrow-right"></i></p><br>
     <el-button @click="dialogVisible = false"  type="danger">登陆</el-button><br>

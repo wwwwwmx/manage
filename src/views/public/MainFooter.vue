@@ -1,35 +1,38 @@
 <!-- 尾部 -->
 <template>   
-        <div class="copyrightnr">    
-          <ul>
-            <li>我们的产品</li>
-            <li>帮助</li>
-            <li>客服</li>
-            <li>如何上传</li>
-          </ul>        
-          <ul>
-            <li>100%幸福保证促销</li>
-            <li>帮助</li>
-            <li>客服</li>
-            <li>如何上传</li>
-          </ul>  
-          <ul>
-            <li>我们的产品</li>
-            <li>帮助</li>
-            <li>客服</li>
-            <li>如何上传</li>
-          </ul>  
-我们的产品
-帮助
-客户支持订单状态
-如何上传
-100%幸福保证促销
-详情
-航运反馈
-关于我们
-所有产品个性化的礼物照片书照片打印帆布日历卡片杯子情况下墙艺术照片的礼物给孩子的礼物礼品卡新来者常见问题科维德常见问题我的订单在哪里?配送信息站点地图可持续性我们是谁职业生涯博客照相亭App与我们合作批量折扣合作伙伴关系附属公司和有影响力的人学生折扣50张免费照片隐私政策使用条款贩卖和奴隶制宣言多样性和包容性税收策略
-
-
+<div class="mainFooter">  
+  <div class="header">
+  <ul><img src="" alt=""></ul>
+  <ul>
+    <li><b>公司</b></li>
+    <li><a href="javascript:;">我们的产品</a></li>
+    <li><a href="javascript:;">投资者关系</a></li>
+    <li><a href="javascript:;">商务解决方案</a></li>
+    <li><a href="javascript:;">想法和灵感</a></li>
+  </ul>        
+  <ul>
+    <li><b>法律</b></li>
+    <li><a href="javascript:;">隐私中心</a></li>
+    <li><a href="javascript:;">社区条款</a></li>
+    <li><a href="javascript:;">国家条款</a></li>
+  </ul>       
+  <ul>
+    <li><b>广告</b></li>
+    <li><a href="javascript:;">购买广告</a></li>
+    <li><a href="javascript:;">广告政策</a></li>
+    <li><a href="javascript:;">品牌指南</a></li>
+    <li><a href="javascript:;">推广规则</a></li>
+  </ul>  
+  <ul>
+    <li><b>帮助</b></li>
+    <li><a href="javascript:;">客服</a></li>
+    <li><a href="javascript:;">如何上传</a></li>
+    <li><a href="javascript:;">举报侵权</a></li>
+  </ul>  
+  </div> 
+  <div class="footer">
+     <p>© 2006 - 2022 Foter - All rights reserved</p>
+  </div> 
 </div>
 </template>
 
@@ -64,8 +67,38 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.mainFooter{
+   background-color: rgb(133, 130, 130);
 
+}
+.header{
+  display: flex;
+  flex-direction: row;
+  /* margin:20px 20px; */
+  border-bottom:1px solid black ;
+}
+.footer{
+  height:50px;
+}
+ul{
+  list-style: none;
+  flex:1;
+  margin:10px;
+}
 
+li{
+  padding:4px 
+}
+a{
+ color:black;
+ text-decoration: none;
+}
+a:hover{
+  color:orangered
+}
+p{
+  text-align: center;
+}
 </style>
 

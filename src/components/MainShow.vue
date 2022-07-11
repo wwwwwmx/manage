@@ -10,9 +10,8 @@
 </template>
 
 <script>
-import MainHeader from '@/views/public/MainHeader.vue'
-import MainFooter from '@/views/public/MainFooter.vue'
-// import MainLogin from '@/views/public/MainLogin.vue'
+import MainHeader from '../views/public/MainHeader.vue'
+import MainFooter from '../views/public/MainFooter.vue'
 import MainContent from '@/views/public/MainContent.vue'
 export default {
   components: { MainHeader, MainFooter, MainContent },
@@ -43,6 +42,10 @@ export default {
 }
 </script>
 <style>
+*{
+  padding:0px;
+  margin:0px;
+}
 .all .el-header{
   width:100%;
   padding :0px 0px;
@@ -50,7 +53,12 @@ export default {
 }
 .el-container .el-main{
   padding:0px;
-      margin:0px 20px;
+  margin:0px;
+}
+.all .el-footer{
+  margin:0px;
+  padding:0px;
+     margin-bottom: 20px;
 }
 </style>
 

@@ -4,27 +4,25 @@
 <div class="headerTop" >
 <img src="//lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/e08da34488b114bd4c665ba2fa520a31.svg" alt="稀土掘金" class="logo-img" data-v-02e25b00="">
 <el-menu 
- :default-active="activeIndex2"
-  class="el-menu-demo"
-  mode="horizontal"
-  @select="handleSelect"
+  class="el-menu-demo" mode="horizontal"
   background-color="#545c64"
   text-color="#fff"
   active-text-color="#ffd04b"
-  router:true
+  :default-active="activeIndex"
   >
     <!-- @open="handleOpen"
     @close="handleClose" -->
     <el-menu-item
       v-for="item in noChildren "
       :key="item.path"
-      index="item.path"
+      :index="item.index"
     >
     {{item.label}}
     </el-menu-item>
-     <el-submenu v-for="item in hasChildren" index="item.path" :key="item.path">
-    <template slot="title">{{item.label}}</template>
-    <el-menu-item v-for="subItem in item.children" index="subItem.index" :key="subItem.path">{{subItem.label}}</el-menu-item>
+    <el-submenu v-for="item in hasChildren" :index="item.index" :key="item.path"  :default-active="activeIndex">
+    <template slot="title"><span slot="title">{{item.label}}</span></template>
+    <el-menu-item v-for="subItem in item.children"  :key="subItem.path" :index="subItem.index">{{subItem.label}} 
+     </el-menu-item> 
 
   </el-submenu>
     
@@ -43,28 +41,28 @@ export default {
   components: {},
   data () {
     return {
-        activeIndex: '1',
-        activeIndex2: '1',
-        menus:[
+          activeIndex:'',
+          menus:[
             {
-                index:1,
+                index:'1',
                 name:'HomePage',
                 path:'/homepage',
                 label:'首页',
                 url:'HomePage'
-            },{
-                index:2,
+            },
+            {
+                index:'2',
                 name:'SortDetail',
                 path:'/sortdetail',
                 label:'照片分类',
                 children:[
-                    {   index:2-1,
-                        name:'111',
-                        path:'/111',
+                    {   index:'2-1',
+                        name:'11',
+                        path:'/11',
                         label:'人文古迹',
-                        url:'111'
+                        url:'11'
                         },{ 
-                            index:2-2,
+                            index:'2-2',
                             name:'222',
                             path:'/222',
                             label:'游玩圣地',
@@ -72,34 +70,22 @@ export default {
                          },
                 ]
             },{
-                index:3,
+                index:'3',
                 name:'333',
                 path:'/333',
                 label:'个人中心',
                 url:'333',
-                 children:[
-                    {   index:3-1,
-                        name:'444',
-                        path:'/444',
-                        label:'个人中心',
-                        url:'444'
-                        },{ 
-                            index:3-2,
-                            name:'555',
-                            path:'/555',
-                            label:'退出',
-                            url:'555'
-                         },
-                ]
-            }
+            },
+             {
+              index:'6',
+              name:'AdminPage',
+              path:'/adminpage',
+              label:'后台',
+              url:'AdminPage'
+            },
     ]}
   },
   methods: {
-      handleSelect(key, keyPath) {
-        console.log(key, keyPath);
-      },
-
-
     },
   computed: {
     noChildren(){
