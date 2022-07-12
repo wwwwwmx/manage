@@ -1,19 +1,18 @@
 <template>
   <div id="app">
-    <main-show></main-show>
-    <!-- <home-page></home-page> -->
+  <router-view></router-view>
+  <!-- <admin-page></admin-page> -->
   </div>
 </template>
 
 <script>
-import MainShow from './components/MainShow.vue'
-// import HomePage  from './views/main/HomePage.vue'
+// import AdminPage from './views/public/AdminPage.vue'
 export default {
   name: 'App',
-  components:{MainShow}
+  // components:{AdminPage}
   }
 </script>
 
-<style>
+<style scoped>
 
 </style>

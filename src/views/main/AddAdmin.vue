@@ -1,13 +1,14 @@
-<!-- 主页面 -->
+<!-- 管理员添加页面 -->
 <template>
-  <div class='123'>
-    <router-view></router-view>
+  <div class='addadmin'>
   </div>
 </template>
 
 <script>
+
 export default {
-  name:'MainContent',
+  name:'AddAdmin',
+  components: {},
   data () {
     return {
 
@@ -34,7 +35,7 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang='scss' scoped>
+//@import url(); 引入公共css类
 
 </style>

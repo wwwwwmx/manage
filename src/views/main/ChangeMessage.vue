@@ -1,13 +1,14 @@
-<!-- 主页面 -->
+<!-- 修改个人资料页面 -->
 <template>
-  <div class='123'>
-    <router-view></router-view>
+  <div class='changemessage'>
   </div>
 </template>
 
 <script>
+
 export default {
-  name:'MainContent',
+  name:'ChangeMessage',
+  components: {},
   data () {
     return {
 
@@ -34,7 +35,7 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang='scss' scoped>
+//@import url(); 引入公共css类
 
 </style>

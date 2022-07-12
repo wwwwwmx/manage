@@ -16,12 +16,13 @@
       v-for="item in noChildren "
       :key="item.path"
       :index="item.index"
+      @click="clickChange(item)"
     >
     {{item.label}}
     </el-menu-item>
     <el-submenu v-for="item in hasChildren" :index="item.index" :key="item.path"  :default-active="activeIndex">
     <template slot="title"><span slot="title">{{item.label}}</span></template>
-    <el-menu-item v-for="subItem in item.children"  :key="subItem.path" :index="subItem.index">{{subItem.label}} 
+    <el-menu-item v-for="subItem in item.children"  :key="subItem.path" :index="subItem.index"  @click="clickChange(subItem)">{{subItem.label}} 
      </el-menu-item> 
 
   </el-submenu>
@@ -33,12 +34,8 @@
 </template>
 
 <script>
-
-
-
 export default {
   name:'MainHeader',
-  components: {},
   data () {
     return {
           activeIndex:'',
@@ -55,6 +52,7 @@ export default {
                 name:'SortDetail',
                 path:'/sortdetail',
                 label:'照片分类',
+                url:'SortDetail',
                 children:[
                     {   index:'2-1',
                         name:'11',
@@ -71,13 +69,13 @@ export default {
                 ]
             },{
                 index:'3',
-                name:'333',
-                path:'/333',
+                name:'PersonDetail',
+                path:'/persondetail',
                 label:'个人中心',
-                url:'333',
+                url:'PersonDetail',
             },
              {
-              index:'6',
+              index:'4',
               name:'AdminPage',
               path:'/adminpage',
               label:'后台',
@@ -86,6 +84,13 @@ export default {
     ]}
   },
   methods: {
+        //跳转到不同的url
+    clickChange(item) {
+      this.$router.push({
+        name: item.name,
+      });
+      // console.log(item)
+    },
     },
   computed: {
     noChildren(){
@@ -93,7 +98,7 @@ export default {
     },
     hasChildren(){
         return this.menus.filter(item=>item.children)
-    }
+    },
   },
   watch: {},
   created () {
